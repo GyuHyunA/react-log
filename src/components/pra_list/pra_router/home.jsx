@@ -8,7 +8,7 @@ const PraApp = () => {
     <>
       <PraNavi />
       <Routes>
-        <Route path="/basic*" element={<BasicHome />} />
+        <Route path="/basic/*" element={<BasicHome />} />
       </Routes>
     </>
   );
