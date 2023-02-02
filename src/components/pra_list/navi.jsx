@@ -17,6 +17,8 @@ const PraNavi = () => {
     <PraNaviStyle>
       <Link to="/prahome">HOME</Link>
       <Link to="/prahome/basic">Basic</Link>
+      <Link to="/prahome/router">Router</Link>
+      <Link to="/prahome/redux">Redux</Link>
     </PraNaviStyle>
   );
 };
