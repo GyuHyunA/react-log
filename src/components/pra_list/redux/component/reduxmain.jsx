@@ -1,11 +1,20 @@
 import React from "react";
-import "./exercise";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import rootReducer from "../modules";
+import CounterContainer from "./countercontainer";
+import ReTodoContainer from "./retodoscontainer";
 
 const ReduxMain = () => {
+  const store = createStore(rootReducer);
   return (
-    <div>
-      <h2>안녕하세요</h2>
-    </div>
+    <Provider store={store}>
+      <CounterContainer />
+      <br />
+      <hr />
+      <br />
+      <ReTodoContainer />
+    </Provider>
   );
 };
 export default ReduxMain;
