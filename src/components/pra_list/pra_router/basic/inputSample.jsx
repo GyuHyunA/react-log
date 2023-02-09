@@ -22,8 +22,8 @@ const InputSample = () => {
   const onChange = (e) => {
     const { value, name } = e.target;
     setInputs({
-      ...inputs,
-      [name]: value,
+      ...inputs, //기존의 input을 복사한다
+      [name]: value, // name 키를 가진 값을 value로 설정
     });
   };
 
