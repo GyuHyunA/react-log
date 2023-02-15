@@ -20,6 +20,8 @@ const UrlRouter = () => {
     <UrlRouterStyle>
       <UrlWrapper>
         <h2>RouterTest</h2>
+        <Link to={""}>HOME</Link>
+        <Link to={"home1"}>HOME1</Link>
         <Link to={"a1"}>A1</Link>
         <Link to={"a1/aa1"}>Aa1</Link>
         <Link to={"a1/aa2"}>Aa2</Link>
