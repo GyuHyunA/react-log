@@ -5,6 +5,7 @@ import About from "./about";
 import Counter from "./counter";
 import Hello from "./hello";
 import InputSample from "./inputSample";
+import UserMain from "./userlist";
 
 const BasicHome = () => {
   return (
@@ -15,6 +16,7 @@ const BasicHome = () => {
         <Route path="/about" element={<About />} />
         <Route path="/input" element={<InputSample />} />
         <Route path="/counter" element={<Counter />} />
+        <Route path="/userMain/*" element={<UserMain />}/>
       </Routes>
     </div>
   );
@@ -36,6 +38,7 @@ const BasicLink = () => {
       <Link to="/prahome/basic/about">About</Link>
       <Link to="/prahome/basic/counter">Counter</Link>
       <Link to="/prahome/basic/input">Input</Link>
+      <Link to="/prahome/basic/usermain">UserList</Link>
     </BasicLinkStyle>
   );
 };
