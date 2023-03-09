@@ -21,6 +21,7 @@ const Navi = () => {
       <Link to="/">Main</Link>
       <Link to="prahome">Prahome</Link>
       <Link to="todolist">PostMain</Link>
+      <Link to="chatgpt">ChatGPT</Link>
       <Link to="testpage">Test</Link>
     </NaviStyle>
   );
