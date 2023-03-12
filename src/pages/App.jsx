@@ -1,29 +1,9 @@
 import { useRoutes } from "react-router-dom";
-import PraApp from "../components/pra_list/home";
-import NotFound from "../components/pra_list/notfound";
-import TestHome from "../components/testpage/home";
-import { TodoMain } from "../components/todolist";
+import { isrouobj } from "../config/rotuers";
 import Navi from "./navi";
 import Wrapper from "./wrapper";
-import { BasicHome, ReduxHome, RouHome, UrlRouter } from "../components/pra_list/";
+// import { BasicHome, ReduxHome, RouHome, UrlRouter } from "../components/pra_list/";
 
-const isrouobj = [
-  { path: "/", element: <Navi /> },
-  {
-    path: "prahome/*",
-    element: <PraApp />,
-    children: [
-      { path: "basic/*", element: <BasicHome /> },
-      { path: "router/*", element: <RouHome /> },
-      { path: "redux/*", element: <ReduxHome /> },
-      { path: "redux/*", element: <UrlRouter /> },
-    ],
-  },
-  { path: "todolist/*", element: <TodoMain /> },
-  { path: "testpage/*", element: <TestHome /> },
-  { path: "chatgpt/*", element: <TestHome /> },
-  { path: "*", element: <NotFound /> },
-];
 
 function App() {
   const routing = useRoutes(isrouobj);

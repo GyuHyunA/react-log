@@ -1,16 +1,15 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Aa1 from "./aa1";
-import Aa2 from "./aa2";
+import { Outlet } from "react-router-dom";
 
 const A1 = () => {
   return (
     <div>
       <h1>A1</h1>
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Aa1/>}></Route>
         <Route path="aa1" element={<Aa2/>}></Route>
-      </Routes>
+      </Routes> */}
+      <Outlet />
     </div>
   );
 };

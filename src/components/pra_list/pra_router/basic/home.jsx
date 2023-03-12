@@ -1,23 +1,12 @@
 import React from "react";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import styled from "styled-components";
-import About from "./about";
-import Counter from "./counter";
-import Hello from "./hello";
-import InputSample from "./inputSample";
-import UserMain from "./userlist";
 
 const BasicHome = () => {
   return (
     <div>
       <BasicLink />
-      <Routes>
-        <Route path="/hello" element={<Hello />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/input" element={<InputSample />} />
-        <Route path="/counter" element={<Counter />} />
-        <Route path="/userMain/*" element={<UserMain />}/>
-      </Routes>
+      <Outlet />
     </div>
   );
 };
