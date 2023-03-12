@@ -8,6 +8,7 @@ import { About, Counter, Hello, InputSample, UserMain } from "../components/pra_
 import UrlRouterMain from "../components/pra_list/urlrouter/home";
 import { A1, Aa1, Aa2, B1 } from "../components/pra_list/urlrouter";
 import Navi from "../pages/navi";
+import AppChatgpt from "../components/chatgpt/pages/\bapp";
 
 export const isrouobj = [
   { path: "/", element: <Navi /> },
@@ -54,6 +55,6 @@ export const isrouobj = [
   },
   { path: "todolist/*", element: <TodoMain /> },
   { path: "testpage/*", element: <TestHome /> },
-  { path: "chatgpt/*", element: <TestHome /> },
+  { path: "chatgpt/*", element: <AppChatgpt /> },
   { path: "*", element: <NotFound /> },
 ];
