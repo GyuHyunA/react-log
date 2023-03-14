@@ -1,18 +1,18 @@
-import PraApp from "../components/pra_list/home";
-import NotFound from "../components/pra_list/notfound";
+import PraApp from "../components/velopert/home";
+import NotFound from "../components/velopert/notfound";
 import TestHome from "../components/testpage/home";
 import TodoMain from "../components/todolist/todomain";
-import { BasicHome, ReduxHome, RouHome, UrlRouter } from "../components/pra_list/";
-// import { PraApp, TodoMain, TestHome, NotFound } from "../components/index";
-import { About, Counter, Hello, InputSample, UserMain } from "../components/pra_list/pra_router";
-import UrlRouterMain from "../components/pra_list/urlrouter/home";
-import { A1, Aa1, Aa2, B1 } from "../components/pra_list/urlrouter";
+import { BasicHome, ReduxHome, RouHome} from "../components/velopert";
+import { About, Counter, Hello, InputSample, UserMain } from "../components/velopert/pra_router";
 import Navi from "../pages/navi";
+import AppChatgpt from "../components/chatgpt/pages/\bapp";
+import { VeInControl } from "../components/velopert/test";
+import VeTestHome from "../components/velopert/test/testhome";
 
 export const isrouobj = [
   { path: "/", element: <Navi /> },
   {
-    path: "prahome/*",
+    path: "velo/*",
     element: <PraApp />,
     children: [
       {
@@ -28,32 +28,13 @@ export const isrouobj = [
       },
       { path: "router/*", element: <RouHome /> },
       { path: "redux/*", element: <ReduxHome /> },
-      {
-        path: "urlrouter/*",
-        element: <UrlRouter />,
-        children: [
-          {
-            path: "",
-            element: <UrlRouterMain />,
-          },
-          {
-            path: "a1",
-            element: <A1 />,
-            children: [
-              { path: "", element: <Aa1 /> },
-              { path: "aa1", element: <Aa2 /> },
-            ],
-          },
-          {
-            path: "b1",
-            element: <B1 />,
-          },
-        ],
-      },
+      { path: "velotest", element: <VeTestHome />, children: [
+        {path: "veloco", element:<VeInControl/>}
+      ]},
     ],
   },
   { path: "todolist/*", element: <TodoMain /> },
   { path: "testpage/*", element: <TestHome /> },
-  { path: "chatgpt/*", element: <TestHome /> },
+  { path: "chatgpt/*", element: <AppChatgpt /> },
   { path: "*", element: <NotFound /> },
 ];
