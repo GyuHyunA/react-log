@@ -23,11 +23,11 @@ const BasicLinkStyle = styled.div`
 const BasicLink = () => {
   return (
     <BasicLinkStyle>
-      <Link to="/prahome/basic/hello">Hello</Link>
-      <Link to="/prahome/basic/about">About</Link>
-      <Link to="/prahome/basic/counter">Counter</Link>
-      <Link to="/prahome/basic/input">Input</Link>
-      <Link to="/prahome/basic/usermain">UserList</Link>
+      <Link to="/velo/basic/hello">Hello</Link>
+      <Link to="/velo/basic/about">About</Link>
+      <Link to="/velo/basic/counter">Counter</Link>
+      <Link to="/velo/basic/input">Input</Link>
+      <Link to="/velo/basic/usermain">UserList</Link>
     </BasicLinkStyle>
   );
 };

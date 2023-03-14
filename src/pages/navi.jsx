@@ -19,7 +19,7 @@ const Navi = () => {
     <NaviStyle>
       <h1>Link</h1>
       <Link to="/">Main</Link>
-      <Link to="prahome">Prahome</Link>
+      <Link to="velo">Velo</Link>
       <Link to="todolist">PostMain</Link>
       <Link to="chatgpt">ChatGPT</Link>
       <Link to="testpage">Test</Link>
