@@ -6,7 +6,7 @@ import { BasicHome, ReduxHome, RouHome} from "../components/velopert";
 import { About, Counter, Hello, InputSample, UserMain } from "../components/velopert/pra_router";
 import Navi from "../pages/navi";
 import AppChatgpt from "../components/chatgpt/pages/\bapp";
-import { VeInControl } from "../components/velopert/test";
+import { AdContentsHome, VeInControl } from "../components/velopert/test";
 import VeTestHome from "../components/velopert/test/testhome";
 
 export const isrouobj = [
@@ -29,7 +29,8 @@ export const isrouobj = [
       { path: "router/*", element: <RouHome /> },
       { path: "redux/*", element: <ReduxHome /> },
       { path: "velotest", element: <VeTestHome />, children: [
-        {path: "veloco", element:<VeInControl/>}
+        {path: "veloco", element:<VeInControl/>},
+        {path: "adcote", element:<AdContentsHome/>}
       ]},
     ],
   },
