@@ -56,6 +56,16 @@ export const AdCoTeStyle = styled.section`
           padding-right: 10px;
         }
       }
+      .dabt-box {
+        display: flex;
+        align-items: center;
+        p {
+          margin-right: 20px;
+        }
+        button {
+          padding: 0 5px;
+        }
+      }
     }
   }
 `;

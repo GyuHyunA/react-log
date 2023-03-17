@@ -30,7 +30,7 @@ export const isrouobj = [
       { path: "redux/*", element: <ReduxHome /> },
       { path: "velotest", element: <VeTestHome />, children: [
         {path: "veloco", element:<VeInControl/>},
-        {path: "adcote", element:<AdContentsHome/>}
+        {path: "adcote/*", element:<AdContentsHome/>}
       ]},
     ],
   },

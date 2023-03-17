@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import { Link, Route, Routes } from "react-router-dom";
+import PostView from "./components/postview";
 import { AdCoTeStyle } from "./mainstyle";
 
 // 메인화면
@@ -9,6 +11,8 @@ const AdContentsHome = () => {
   });
 
   const [isList, setIsList] = useState(listContents);
+
+  const [isId, setIsId] = useState(0);
 
   const { con_title, con_contents } = inContents;
 
@@ -49,6 +53,11 @@ const AdContentsHome = () => {
     addId.current += 1;
   };
 
+  const removeCon = (id) => {
+    setIsList(isList.filter((v) => v.id !== id));
+  };
+
+  console.log(isList);
   return (
     <AdCoTeStyle>
       <h1 className="title">게시판 글 작성목록 만들기</h1>
@@ -65,24 +74,32 @@ const AdContentsHome = () => {
       <div className="con-contain">
         <h1>게시판</h1>
         {isList.map((v) => {
-          return (
-            <div className="list-wrap" key={v.id}>
-              <div className="list-box">
-                <p className="li-num">No. {v.id}</p>
-                <h3 className="li-title">{v.con_title}</h3>
-              </div>
-              <div className="dabt-box">
-                <p>date</p>
-                <button>삭제</button>
-              </div>
-            </div>
-          );
+          return <CreateList id={v.id} contitle={v.con_title} key={v.id} remove={removeCon} isId={setIsId} />;
         })}
       </div>
+      <Routes>
+        <Route path={`post/${isId}`} element={<PostView id={isId} />} />
+      </Routes>
     </AdCoTeStyle>
   );
 };
 
 export default AdContentsHome;
 
-const listContents = [{ id: 1, con_title: "기본", con_contents: "기본적인 것입니다" }];
+const CreateList = ({ id, contitle, remove, isId }) => {
+  return (
+    <div className="list-wrap">
+      <div className="list-box">
+        <Link to={`post/${id}`} onClick={() => isId(id)}>
+          <h3 className="li-title">{contitle}</h3>
+        </Link>
+      </div>
+      <div className="dabt-box">
+        <p>date</p>
+        <button onClick={() => remove(id)}>삭제</button>
+      </div>
+    </div>
+  );
+};
+
+const listContents = [];
