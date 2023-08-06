@@ -2,12 +2,12 @@ import PraApp from "../components/velopert/home";
 import NotFound from "../components/velopert/notfound";
 import TestHome from "../components/testpage/home";
 import TodoMain from "../components/todolist/todomain";
-import { BasicHome, ReduxHome, RouHome } from "../components/velopert";
+import { BasicHome, RouHome } from "../components/velopert";
 import { About, Counter, Hello, InputSample, UserMain } from "../components/velopert/pra_router";
 import Navi from "../pages/navi";
-import AppChatgpt from "../components/chatgpt/pages/\bapp";
-import { AdContentsHome, ClassCompMain, VeInControl } from "../components/velopert/test";
+import { AdContentsHome, ApiConnect, ClassCompMain, VeInControl } from "../components/velopert/test";
 import VeTestHome from "../components/velopert/test/testhome";
+import RouterHome from "../components/routercomp/routerHome";
 
 export const isrouobj = [
   { path: "/", element: <Navi /> },
@@ -27,7 +27,6 @@ export const isrouobj = [
         ],
       },
       { path: "router/*", element: <RouHome /> },
-      { path: "redux/*", element: <ReduxHome /> },
       {
         path: "velotest",
         element: <VeTestHome />,
@@ -40,7 +39,7 @@ export const isrouobj = [
     ],
   },
   { path: "todolist/*", element: <TodoMain /> },
-  { path: "testpage/*", element: <TestHome /> },
-  { path: "chatgpt/*", element: <AppChatgpt /> },
+  { path: "testpage/*", element: <TestHome />, children: [{ path: "apiconnect", element: <ApiConnect /> }] },
+  { path: "router/*", element: <RouterHome /> },
   { path: "*", element: <NotFound /> },
 ];
