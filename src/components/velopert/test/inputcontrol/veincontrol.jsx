@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { Veincostyle } from "./veincostyle";
 
@@ -30,9 +30,13 @@ const VeInControl = () => {
       logname: "",
       logaccount: "",
     });
+
     nextId.current += 1;
   };
 
+  const onRemove = (id) => {
+    setLogUser(logUser.filter((u) => u.id !== id));
+  };
 
   return (
     <Veincostyle>
@@ -45,33 +49,42 @@ const VeInControl = () => {
         <input type="text" name="logaccount" onChange={onChange} />
         <button onClick={onCreate}>제출</button>
       </div>
-      <Contain loguser={logUser} />
+      <Contain loguser={logUser} onRemove={onRemove} />
     </Veincostyle>
   );
 };
 
 export default VeInControl;
 
-const Contain = ({ loguser }) => {
+const Contain = ({ loguser, onRemove }) => {
   return (
     <>
       {loguser.map((v, i) => {
-        return <Loglist user={v} key={i} />;
+        return <Loglist user={v} key={i} onRemove={onRemove} />;
       })}
     </>
   );
 };
 
-const Loglist = ({ user }) => {
+const Loglist = ({ user, onRemove }) => {
+  useEffect(() => {
+    console.log("user 값이 설정됨");
+    console.log(user);
+    return () => {
+      console.log("user가 바뀌기 전");
+      console.log(user);
+    };
+  }, [user]);
+
   return (
-    <div>
+    <>
       <p className="na">
         <span className="nt">
           {user.id}. {user.logname}
         </span>
-        ({user.logaccount})
+        ({user.logaccount}) <button onClick={() => onRemove(user.id)}>삭제</button>
       </p>
-    </div>
+    </>
   );
 };
 

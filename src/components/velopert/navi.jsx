@@ -18,7 +18,7 @@ const PraNavi = () => {
       <Link to="/velo">HOME</Link>
       <Link to="/velo/basic">Basic</Link>
       <Link to="/velo/router">Router</Link>
-      <Link to="/velo/redux">Redux</Link>
+      <Link to="/velo/l"></Link>
       <Link to="/velo/velotest">VeloTest</Link>
     </PraNaviStyle>
   );
