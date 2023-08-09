@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Link, Outlet, Route, Routes } from "react-router-dom";
+import { Link, NavLink, Outlet, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import Aboute from "./aboute";
 import Producte from "./producte";
 import ProductSingle from "./productSingle";
+import Login from "./login";
+import Dashboard from "./dashboard";
+import ProtectedRoute from "./protectedRoute";
 
 const CompStyle = styled.div`
   nav {
@@ -23,6 +26,7 @@ const CompStyle = styled.div`
 
 const RouterHome = () => {
   const [user, setUser] = useState(null)
+
   return (
     <CompStyle>
       <nav>
@@ -35,6 +39,7 @@ const RouterHome = () => {
         <Link to="products" className="btn">
           products
         </Link>
+        <NavLink to="login" className="btn">login</NavLink>
       </nav>
       {/*  */}
       <Routes>
@@ -42,6 +47,8 @@ const RouterHome = () => {
         <Route path="aboute" element={<Aboute />} />
         <Route path="products" element={<Producte />} />
         <Route path="products/:productId" element={<ProductSingle />} />
+        <Route path="login" element={<Login setUser={setUser}></Login>}/>
+        <Route path="dashboard" element={<ProtectedRoute user={user}><Dashboard user={user}/></ProtectedRoute>}/>
       </Routes>
       <Outlet />
     </CompStyle>
