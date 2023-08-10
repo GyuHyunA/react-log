@@ -23,6 +23,7 @@ const Navi = () => {
       <Link to="todolist">PostMain</Link>
       <Link to="testpage">Test</Link>
       <Link to="router">Router</Link>
+      <Link to="redux">Redux</Link>
     </NaviStyle>
   );
 };

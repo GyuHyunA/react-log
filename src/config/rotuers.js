@@ -8,6 +8,7 @@ import Navi from "../pages/navi";
 import { AdContentsHome, ApiConnect, ClassCompMain, VeInControl } from "../components/velopert/test";
 import VeTestHome from "../components/velopert/test/testhome";
 import RouterHome from "../components/routercomp/routerHome";
+import ReduxHome from "../components/reduxcomp/reduxHome";
 
 export const isrouobj = [
   { path: "/", element: <Navi /> },
@@ -41,5 +42,6 @@ export const isrouobj = [
   { path: "todolist/*", element: <TodoMain /> },
   { path: "testpage/*", element: <TestHome />, children: [{ path: "apiconnect", element: <ApiConnect /> }] },
   { path: "router/*", element: <RouterHome /> },
+  { path: "redux/*", element: <ReduxHome /> },
   { path: "*", element: <NotFound /> },
 ];
