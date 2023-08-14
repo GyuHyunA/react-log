@@ -8,7 +8,7 @@ const ReduxHome = () => {
     <>
       <ReduxNav />
       <Routes>
-        <Route index to="/" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
       </Routes>
     </>
   );

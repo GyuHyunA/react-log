@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import styled from "styled-components";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <HomeStyle>
+        Redux
+      </HomeStyle>
+    </>
+  );
+};
 
-export default Home
+export default Home;
+
+const HomeStyle = styled.div`
+  
+`;

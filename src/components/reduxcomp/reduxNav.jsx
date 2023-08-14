@@ -12,7 +12,6 @@ const ReduxNav = () => {
   return (
     <ReduxNavStyle>
       <NavLink to="/redux">HOME</NavLink>
-      <NavLink to="/redux/about">About</NavLink>
     </ReduxNavStyle>
   );
 };
