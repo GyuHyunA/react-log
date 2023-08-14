@@ -1,4 +1,4 @@
-import { createStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 
 const reducerFunc = (state = { counter: 0 }, action) => {
   //synchronous Function
@@ -20,6 +20,6 @@ const reducerFunc = (state = { counter: 0 }, action) => {
   return state;
 };
 
-const store = createStore(reducerFunc);
+const store = configureStore(reducerFunc);
 
 export default store;

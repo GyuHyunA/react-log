@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, createSlice } from "react-redux";
 
 const Home = () => {
-  const counter = useSelector((state) => state.counter);
+  const counter = createSlice((state) => state.counter);
   const dispatch = useDispatch();
   const increment = () => {
     dispatch({ type: "INC" });
