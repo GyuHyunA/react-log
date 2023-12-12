@@ -1,16 +1,7 @@
-import { useRoutes } from "react-router-dom";
-import { isrouobj } from "../config/rotuers";
-import Navi from "./navi";
-import Wrapper from "./wrapper";
-
 function App() {
-  const routing = useRoutes(isrouobj);
-  return (
-    <>
-      <Navi />
-      <Wrapper>{routing}</Wrapper>
-    </>
-  );
+  return <>
+  <h2>HOME</h2>
+  </>;
 }
 
 export default App;
