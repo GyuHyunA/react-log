@@ -1,10 +1,10 @@
-import BasicHome from "../components/Basic/BasicHome";
+import MainApp from "../components/MainApp";
 import NotFound from "../components/error/NotFound";
 
 export const routerList = [
   {
     path: "/",
-    element: <BasicHome />,
+    element: <MainApp />,
   },
   {
     path: "*",
