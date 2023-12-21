@@ -2,6 +2,7 @@ import React from "react";
 import BasicApp from "./Basic/BasicApp";
 import StateApp from "./Basic/useState/StateApp";
 import InputApp from "./Basic/input/InputApp";
+import ArrayApp from "./Basic/array/arrayApp";
 
 const MainApp = () => {
   return (
@@ -16,6 +17,9 @@ const MainApp = () => {
       <br />
       <InputApp />
       <br />
+      <hr />
+      <br />
+      <ArrayApp />
     </>
   );
 };
