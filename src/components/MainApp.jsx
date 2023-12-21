@@ -1,7 +1,7 @@
 import React from "react";
-import StateApp from "./useState/StateApp";
 import BasicApp from "./Basic/BasicApp";
-import InputApp from "./input/InputApp";
+import StateApp from "./Basic/useState/StateApp";
+import InputApp from "./Basic/input/InputApp";
 
 const MainApp = () => {
   return (
