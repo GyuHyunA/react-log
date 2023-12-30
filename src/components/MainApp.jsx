@@ -3,6 +3,7 @@ import BasicApp from "./Basic/BasicApp";
 import StateApp from "./Basic/useState/StateApp";
 import InputApp from "./Basic/input/InputApp";
 import ArrayApp from "./Basic/array/arrayApp";
+import EffectApp from "./Basic/useEffect/EffectApp";
 
 const MainApp = () => {
   return (
@@ -20,6 +21,10 @@ const MainApp = () => {
       <hr />
       <br />
       <ArrayApp />
+      <br />
+      <hr />
+      <br />
+      <EffectApp />
     </>
   );
 };
