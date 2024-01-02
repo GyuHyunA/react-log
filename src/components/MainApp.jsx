@@ -5,6 +5,7 @@ import InputApp from "./Basic/input/InputApp";
 import ArrayApp from "./Basic/array/arrayApp";
 import EffectApp from "./Basic/useEffect/EffectApp";
 import MemoApp from "./Basic/useMemo/MemoApp";
+import CallBackApp from "./Basic/useCallback/CallBackApp";
 
 const MainApp = () => {
   return (
@@ -31,6 +32,9 @@ const MainApp = () => {
       <br />
       <MemoApp />
       <br />
+      <hr />
+      <br />
+      <CallBackApp />
     </>
   );
 };
