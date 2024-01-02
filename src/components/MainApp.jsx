@@ -4,6 +4,7 @@ import StateApp from "./Basic/useState/StateApp";
 import InputApp from "./Basic/input/InputApp";
 import ArrayApp from "./Basic/array/arrayApp";
 import EffectApp from "./Basic/useEffect/EffectApp";
+import MemoApp from "./Basic/useMemo/MemoApp";
 
 const MainApp = () => {
   return (
@@ -25,6 +26,11 @@ const MainApp = () => {
       <hr />
       <br />
       <EffectApp />
+      <br />
+      <hr />
+      <br />
+      <MemoApp />
+      <br />
     </>
   );
 };
