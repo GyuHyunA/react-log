@@ -6,6 +6,7 @@ import ArrayApp from "./Basic/array/arrayApp";
 import EffectApp from "./Basic/useEffect/EffectApp";
 import MemoApp from "./Basic/useMemo/MemoApp";
 import CallBackApp from "./Basic/useCallback/CallBackApp";
+import ReducerApp from "./Basic/reducer/ReducerApp";
 
 const MainApp = () => {
   return (
@@ -35,6 +36,10 @@ const MainApp = () => {
       <hr />
       <br />
       <CallBackApp />
+      <br />
+      <hr />
+      <br />
+      <ReducerApp />
     </>
   );
 };
