@@ -7,10 +7,13 @@ import EffectApp from "./Basic/useEffect/EffectApp";
 import MemoApp from "./Basic/useMemo/MemoApp";
 import CallBackApp from "./Basic/useCallback/CallBackApp";
 import ReducerApp from "./Basic/reducer/ReducerApp";
+import { Link } from "react-router-dom";
+import HookApp from "./Basic/customHook/hookApp";
 
 const MainApp = () => {
   return (
     <>
+      <Link to="testApp">TestAppLink</Link>
       <BasicApp />
       <br />
       <hr />
@@ -40,6 +43,10 @@ const MainApp = () => {
       <hr />
       <br />
       <ReducerApp />
+      <br />
+      <hr />
+      <br />
+      <HookApp />
     </>
   );
 };
