@@ -1,4 +1,4 @@
-import TestApp from "../components/Basic/testApp";
+import TestApp from "../components/testApp";
 import MainApp from "../components/MainApp";
 import NotFound from "../components/error/NotFound";
 

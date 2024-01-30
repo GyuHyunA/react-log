@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const TestApp = () => {
+const TcallBackApp = () => {
   const [number, setNumber] = useState(0);
 
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(true);
 
   const someFunction = useCallback(() => {
     console.log(`someFunc: number : ${number}`);
@@ -14,7 +14,6 @@ const TestApp = () => {
   useEffect(() => {
     console.log(`someFunction이 변경되었습니다`);
   }, [someFunction]);
-
   return (
     <>
       <Link to={"/"}>HOME</Link>
@@ -29,4 +28,4 @@ const TestApp = () => {
   );
 };
 
-export default TestApp;
+export default TcallBackApp;
