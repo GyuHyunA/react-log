@@ -1,16 +1,28 @@
-import { useState } from "react";
+import { useReducer } from "react";
+
+const countReducer = (state, action) => {
+  switch (action.type) {
+    case "UP":
+      return state + 1;
+    case "DOWN":
+      return state - 1;
+    default:
+      return state;
+  }
+};
 
 const CuHook = () => {
-  const [counter, setCounter] = useState(0);
-
-  const isIncrease = () => {
-    setCounter((v) => v + 1);
+  const [counter, dispatch] = useReducer(countReducer, 0);
+  const countControl = (e) => {
+    const btnText = e.target.innerText;
+    if (btnText === "+") {
+      dispatch({ type: "UP" });
+    } else if (btnText === "-") {
+      dispatch({ type: "DOWN" });
+    }
   };
 
-  const isDecrease = () => {
-    setCounter((v) => v - 1);
-  };
-  return [counter, isIncrease, isDecrease]
+  return [counter, countControl];
 };
 
 export default CuHook;
