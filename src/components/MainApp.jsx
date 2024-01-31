@@ -9,6 +9,7 @@ import CallBackApp from "./Basic/useCallback/CallBackApp";
 import ReducerApp from "./Basic/reducer/ReducerApp";
 import { Link } from "react-router-dom";
 import HookApp from "./Basic/customHook/hookApp";
+import ContextApp from "./Basic/contextAPI/ContextApp";
 
 const MainApp = () => {
   return (
@@ -18,6 +19,7 @@ const MainApp = () => {
       <br />
       <hr />
       <br />
+      <p>useState</p>
       <StateApp />
       <br />
       <hr />
@@ -26,27 +28,38 @@ const MainApp = () => {
       <br />
       <hr />
       <br />
+      <p>Array State</p>
       <ArrayApp />
       <br />
       <hr />
       <br />
+      <p>useEffect</p>
       <EffectApp />
       <br />
       <hr />
       <br />
+      <p>useMemo</p>
       <MemoApp />
       <br />
       <hr />
       <br />
+      <p>useCallback</p>
       <CallBackApp />
       <br />
       <hr />
       <br />
+      <p>useReducer</p>
       <ReducerApp />
       <br />
       <hr />
       <br />
+      <p>CustomHook</p>
       <HookApp />
+      <br />
+      <hr />
+      <br />
+      <p>ContextAPI</p>
+      <ContextApp />
     </>
   );
 };
